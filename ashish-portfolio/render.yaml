@@ -2,6 +2,7 @@ services:
   - type: web
     name: ashish-portfolio
     env: node
+    rootDir: ashish-portfolio
     buildCommand: npm run build
     startCommand: npm start
     envVars:
@@ -9,10 +10,6 @@ services:
         value: 18
       - key: NEXT_TELEMETRY_DISABLED
         value: 1
-    routes:
-      - type: rewrite
-        source: "/(.*)"
-        destination: "/"
 
     # Environment variables - set these in the Render dashboard
     # GMAIL_USER: your_email@gmail.com
